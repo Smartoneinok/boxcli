@@ -9,7 +9,7 @@
 		"upload",
 		"download"
 	],
-	"version": "3.9.0",
+	"version": "3.9.1",
 	"author": "Box <oss@box.com>",
 	"license": "Apache-2.0",
 	"main": "src/index.js",
@@ -29,10 +29,10 @@
 		"@oclif/plugin-help": "^2.2.1",
 		"@oclif/plugin-not-found": "^1.2.0",
 		"archiver": "^3.0.0",
-		"box-node-sdk": "^3.1.0",
+		"box-node-sdk": "^3.1.1",
 		"chalk": "^2.4.1",
 		"cli-progress": "^2.1.0",
-		"csv": "^3.1.0",
+		"csv": "^6.3.1",
 		"date-fns": "^1.29.0",
 		"debug": "^4.1.0",
 		"express": "^4.17.1",
@@ -141,5 +141,10 @@
 		"build": "oclif-dev pack:macos && rm -rf tmp/ && oclif-dev pack:win && rm -rf tmp/ && npm run binaries",
 		"binaries": "pkg --targets node12-macos-x64,node12-win-x64,node12-linux-x64 --out-path ./dist .",
 		"changelog": "node node_modules/standard-version/bin/cli.js --skip.commit --skip.push --skip.tag --dry-run"
+	},
+	"overrides": {
+		"leche": {
+			"mocha": ">=1.18"
+		}
 	}
 }
